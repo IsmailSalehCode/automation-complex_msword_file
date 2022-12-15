@@ -23,7 +23,7 @@ function generateDoc(fname) {
             children: [new Paragraph(fname)],
           }),
         },
-        children: [new Paragraph("Hello World")],
+        children: [],
       },
     ],
   });
