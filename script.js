@@ -31,7 +31,11 @@ function generateDoc(fname) {
         },
         footers: {
           default: new Footer({
-            children: [new Paragraph(fname)],
+            children: [
+              new Paragraph({
+                children: [new TextRun(fname)],
+              }),
+            ],
           }),
         },
         children: [],
