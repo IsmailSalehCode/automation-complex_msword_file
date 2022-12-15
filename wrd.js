@@ -11,7 +11,7 @@ const {
   PageNumber,
 } = pkg;
 import pkg2 from "prompt-sync";
-const prompt = pkg2({ sigint: true });
+const prompt = pkg2();
 
 const fname = prompt("Enter file name: ");
 generateDoc(fname);
@@ -76,10 +76,14 @@ function generateDoc(fname) {
     ],
   });
 
-  // Used to export the file into a .docx file
-  Packer.toBuffer(doc).then((buffer) => {
-    fs.writeFileSync(fname + ".docx", buffer);
-  });
-
-  // Done! A file called 'fname' will be in your file system.
+  try {
+    Packer.toBuffer(doc)
+      .then((buffer) => {
+        fs.writeFileSync(fname + ".docx", buffer);
+      })
+      .then(console.log("Done"));
+  } catch (err) {
+    console.log("Error occured\n");
+    console.log(err);
+  }
 }
