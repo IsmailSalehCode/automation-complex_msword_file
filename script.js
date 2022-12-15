@@ -1,6 +1,6 @@
 import * as fs from "fs";
 import pkg from "docx";
-const { Document, Packer, Paragraph, TextRun } = pkg;
+const { Document, Packer, Paragraph, TextRun, Header, Footer } = pkg;
 import pkg2 from "prompt-sync";
 const prompt = pkg2({ sigint: true });
 
@@ -13,22 +13,17 @@ function generateDoc(fname) {
   const doc = new Document({
     sections: [
       {
-        properties: {},
-        children: [
-          new Paragraph({
-            children: [
-              new TextRun("Hello World"),
-              new TextRun({
-                text: "Foo Bar",
-                bold: true,
-              }),
-              new TextRun({
-                text: "\tGithub is the best",
-                bold: true,
-              }),
-            ],
+        headers: {
+          default: new Header({
+            children: [new Paragraph(fname)],
           }),
-        ],
+        },
+        footers: {
+          default: new Footer({
+            children: [new Paragraph(fname)],
+          }),
+        },
+        children: [new Paragraph("Hello World")],
       },
     ],
   });
