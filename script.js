@@ -1,7 +1,8 @@
 import * as fs from "fs";
 import pkg from "docx";
 const { Document, Packer, Paragraph, TextRun } = pkg;
-const prompt = require("prompt-sync")({ sigint: true });
+import pkg2 from "prompt-sync";
+const prompt = pkg2({ sigint: true });
 
 const fname = prompt("Enter file name: ");
 generateDoc(fname);
