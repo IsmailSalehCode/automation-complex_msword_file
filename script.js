@@ -8,8 +8,6 @@ const fname = prompt("Enter file name: ");
 generateDoc(fname);
 
 function generateDoc(fname) {
-  // Documents contain sections, you can have multiple sections per document, go here to learn more about sections
-  // This simple example will only contain one section
   const marginNum = 600;
   const doc = new Document({
     sections: [
