@@ -19,6 +19,21 @@ generateDoc(fname);
 function generateDoc(fname) {
   const marginNum = 550;
   const doc = new Document({
+    creator: "Ismail Saleh",
+    styles: {
+      paragraphStyles: [
+        {
+          id: "roboto",
+          name: "Roboto style",
+          basedOn: "Normal",
+          next: "Normal",
+          quickFormat: true,
+          run: {
+            font: "Roboto",
+          },
+        },
+      ],
+    },
     sections: [
       {
         // https://docx.js.org/#/usage/page-numbers
