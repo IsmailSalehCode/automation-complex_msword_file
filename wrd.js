@@ -17,7 +17,7 @@ const fname = prompt("Enter file name: ");
 generateDoc(fname);
 
 function generateDoc(fname) {
-  const marginNum = 600;
+  const marginNum = 550;
   const doc = new Document({
     sections: [
       {
@@ -42,7 +42,17 @@ function generateDoc(fname) {
             children: [
               new Paragraph({
                 alignment: AlignmentType.END,
-                children: [new TextRun(fname)],
+                children: [
+                  new TextRun(fname),
+                  new TextRun({
+                    children: [
+                      "Page ",
+                      PageNumber.CURRENT,
+                      " of ",
+                      PageNumber.TOTAL_PAGES,
+                    ],
+                  }),
+                ],
               }),
             ],
           }),
