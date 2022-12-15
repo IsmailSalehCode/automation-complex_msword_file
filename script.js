@@ -1,7 +1,15 @@
 import * as fs from "fs";
 import pkg from "docx";
-const { Document, Packer, Paragraph, TextRun, Header, Footer, PageNumber } =
-  pkg;
+const {
+  AlignmentType,
+  Document,
+  Packer,
+  Paragraph,
+  TextRun,
+  Header,
+  Footer,
+  PageNumber,
+} = pkg;
 import pkg2 from "prompt-sync";
 const prompt = pkg2({ sigint: true });
 
@@ -33,6 +41,7 @@ function generateDoc(fname) {
           default: new Footer({
             children: [
               new Paragraph({
+                alignment: AlignmentType.END,
                 children: [new TextRun(fname)],
               }),
             ],
