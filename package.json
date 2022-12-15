@@ -1,0 +1,15 @@
+{
+  "name": "wrd",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Generate \"spacious\" word doc",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ismail Saleh",
+  "license": "ISC",
+  "dependencies": {
+    "docx": "^7.8.0"
+  }
+}
