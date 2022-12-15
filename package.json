@@ -2,7 +2,7 @@
   "name": "wrd",
   "type": "module",
   "version": "1.0.0",
-  "description": "Generate \"spacious\" word doc",
+  "description": "Generate \"spacious\" page-numbered word doc",
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
