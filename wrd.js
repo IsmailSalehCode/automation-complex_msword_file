@@ -43,7 +43,7 @@ function generateDoc(fname) {
               new Paragraph({
                 alignment: AlignmentType.END,
                 children: [
-                  new TextRun(fname),
+                  new TextRun(fname + " "),
                   new TextRun({
                     children: [
                       "Page ",
