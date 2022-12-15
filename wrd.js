@@ -23,12 +23,9 @@ function generateDoc(fname) {
     styles: {
       paragraphStyles: [
         {
-          id: "roboto",
-          name: "Roboto style",
-          basedOn: "Normal",
-          next: "Normal",
-          quickFormat: true,
+          name: "Normal",
           run: {
+            size: 24,
             font: "Roboto",
           },
         },
