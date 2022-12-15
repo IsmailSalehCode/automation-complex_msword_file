@@ -1,3 +1,1 @@
-node wrd.js
-
-cmd /k
+cmd /k node wrd.js
