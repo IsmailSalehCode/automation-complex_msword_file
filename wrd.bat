@@ -1,2 +1,4 @@
 @ECHO OFF
-cmd /k node wrd.js
+node C:\Users\centr\Desktop\automation\node-spacious_word-generator\wrd.js
+
+cmd /k 
