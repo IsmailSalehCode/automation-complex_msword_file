@@ -10,9 +10,21 @@ generateDoc(fname);
 function generateDoc(fname) {
   // Documents contain sections, you can have multiple sections per document, go here to learn more about sections
   // This simple example will only contain one section
+  const marginNum = 600;
   const doc = new Document({
     sections: [
       {
+        // https://docx.js.org/#/usage/page-numbers
+        properties: {
+          page: {
+            margin: {
+              top: marginNum,
+              right: marginNum,
+              bottom: marginNum,
+              left: marginNum,
+            },
+          },
+        },
         headers: {
           default: new Header({
             children: [new Paragraph(fname)],
