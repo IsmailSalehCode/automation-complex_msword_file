@@ -37,6 +37,8 @@ function generateDoc(fname) {
         properties: {
           page: {
             margin: {
+              header: marginNum,
+              footer: marginNum,
               top: marginNum,
               right: marginNum,
               bottom: marginNum,
