@@ -25,7 +25,7 @@ function generateDoc(fname) {
         {
           name: "Normal",
           run: {
-            size: 24,
+            size: 20,
             font: "Roboto",
           },
         },
