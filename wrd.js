@@ -29,6 +29,27 @@ function generateDoc(fname) {
             font: "Roboto",
           },
         },
+        {
+          name: "Strong1",
+          run: {
+            size: 20,
+            font: "Consolas",
+            border: {
+              top: {
+                color: "black",
+                space: 1,
+                style: "single",
+                size: 6,
+              },
+              bottom: {
+                color: "black",
+                space: 1,
+                style: "single",
+                size: 6,
+              },
+            },
+          },
+        },
       ],
     },
     sections: [
@@ -48,11 +69,6 @@ function generateDoc(fname) {
         },
         headers: {
           default: new Header({
-            children: [new Paragraph(fname)],
-          }),
-        },
-        footers: {
-          default: new Footer({
             children: [
               new Paragraph({
                 alignment: AlignmentType.END,

@@ -1,0 +1,3 @@
+add code style - black consolas 10px; outside borders
+prompt- Open the doc? (Y/n)
+video
