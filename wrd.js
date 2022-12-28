@@ -30,10 +30,10 @@ function generateDoc(fname) {
           },
         },
         {
-          name: "Strong1",
+          id: "code",
+          name: "Code",
+          quickFormat: true,
           run: {
-            size: 20,
-            font: "Consolas",
             border: {
               top: {
                 color: "black",
@@ -48,6 +48,8 @@ function generateDoc(fname) {
                 size: 6,
               },
             },
+            size: 20,
+            font: "Consolas",
           },
         },
       ],
