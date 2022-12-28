@@ -33,15 +33,16 @@ function generateDoc(fname) {
           name: "Code",
           quickFormat: true,
           run: {
+            // idk why, but border doesnt work, no matter if it is outside or inside run{ }
             border: {
               top: {
-                color: "black",
+                color: "auto",
                 space: 1,
                 style: "single",
                 size: 6,
               },
               bottom: {
-                color: "black",
+                color: "auto",
                 space: 1,
                 style: "single",
                 size: 6,
