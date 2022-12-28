@@ -20,17 +20,11 @@ function generateDoc(fname) {
   const doc = new Document({
     creator: "Ismail Saleh",
     styles: {
-      paragraphStyles: [
-        {
-          name: "Normal",
-          run: {
-            size: 20,
-            font: "Roboto",
-          },
-        },
+      characterStyles: [
         {
           id: "code",
           name: "Code",
+          basedOn: "Normal",
           quickFormat: true,
           run: {
             // idk why, but border doesnt work, no matter if it is outside or inside run{ }
@@ -50,6 +44,15 @@ function generateDoc(fname) {
             },
             size: 20,
             font: "Consolas",
+          },
+        },
+      ],
+      paragraphStyles: [
+        {
+          name: "Normal",
+          run: {
+            size: 20,
+            font: "Roboto",
           },
         },
       ],
