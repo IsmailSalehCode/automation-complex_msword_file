@@ -7,7 +7,6 @@ const {
   Paragraph,
   TextRun,
   Header,
-  Footer,
   PageNumber,
 } = pkg;
 import pkg2 from "prompt-sync";
