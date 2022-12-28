@@ -10,61 +10,18 @@ const {
   PageNumber,
 } = pkg;
 import pkg2 from "prompt-sync";
-const prompt = pkg2();
 
+const prompt = pkg2();
+const stylesPath = "C:\\Users\\automation\\node-word-generator\\styles.xml";
 const fname = prompt("Enter file name: ");
 generateDoc(fname);
 
 function generateDoc(fname) {
   const marginNum = 550;
-  const styles = fs.readFileSync("./styles.xml", "utf-8");
+  const styles = fs.readFileSync(stylesPath, "utf-8");
   const doc = new Document({
     creator: "Ismail Saleh",
     externalStyles: styles,
-    // styles: {
-    //   characterStyles: [
-    //     {
-    //       id: "code",
-    //       name: "Code",
-    //       basedOn: "Normal",
-    //       quickFormat: true,
-    //       run: {
-    //         underline: "black",
-    //         // idk why, but border doesnt work, no matter if it is outside or inside run{ }
-    //         border: {
-    //           top: {
-    //             color: "auto",
-    //             space: 1,
-    //             style: "single",
-    //             size: 6,
-    //           },
-    //           bottom: {
-    //             color: "auto",
-    //             space: 1,
-    //             style: "single",
-    //             size: 6,
-    //           },
-    //         },
-    //         size: 20,
-    //         font: "Consolas",
-    //       },
-    //     },
-    //   ],
-    //   paragraphStyles: [
-    //     {
-    //       name: "Normal",
-    //       run: {
-    //         size: 20,
-    //         font: "Roboto",
-    //       },
-    //       paragraph: {
-    //         spacing: {
-    //           after: 15,
-    //         },
-    //       },
-    //     },
-    //   ],
-    // },
     sections: [
       {
         // https://docx.js.org/#/usage/page-numbers
