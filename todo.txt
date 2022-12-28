@@ -1,3 +1,7 @@
-add code style - black consolas 10px; outside borders
+document following new features:
+- pagination and title in header only in order to save ink
+- paragraph spacing
+- Code quick style - done - 28.12.2022
+
 prompt- Open the doc? (Y/n)
 video
