@@ -54,6 +54,11 @@ function generateDoc(fname) {
             size: 20,
             font: "Roboto",
           },
+          paragraph: {
+            spacing: {
+              after: 15,
+            },
+          },
         },
       ],
     },
