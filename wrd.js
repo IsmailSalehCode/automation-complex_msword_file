@@ -17,7 +17,7 @@ const fname = prompt("Enter file name: ");
 generateDoc(fname);
 
 function generateDoc(fname) {
-  const marginNum = 550;
+  const marginNum = 450;
   const styles = fs.readFileSync(stylesPath, "utf-8");
   const doc = new Document({
     creator: "Ismail Saleh",
@@ -51,7 +51,7 @@ function generateDoc(fname) {
                     children: [
                       "Page ",
                       PageNumber.CURRENT,
-                      " of ",
+                      " / ",
                       PageNumber.TOTAL_PAGES,
                     ],
                   }),
